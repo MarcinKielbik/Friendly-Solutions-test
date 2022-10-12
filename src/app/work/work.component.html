@@ -1,0 +1,22 @@
+<div class="container">
+    <app-work-search></app-work-search>
+    <table>
+        <tr>
+            <td>Work order id</td>
+            <td>Description</td>
+            <td>Received date</td>
+            <td>Assigned to</td>
+            <td>Status</td>
+            <td>Priority</td>
+          </tr>
+          <tr *ngFor="let task of tasksList; index as i;">
+            <td>{{tasksList[i]?.work_order_id}}</td>
+            <td>{{tasksList[i]?.description}}</td>
+            <td>{{tasksList[i]?.received_date}}</td>
+            <td>{{tasksList[i]?.assigned_to | json}}</td>
+            <td>{{tasksList[i]?.status}}</td>
+            <td>{{tasksList[i]?.priority}}</td>
+          </tr>
+    </table>
+</div>
+

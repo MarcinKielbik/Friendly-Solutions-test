@@ -1,0 +1,6 @@
+<div class="search-work">
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+</div>
+<li *ngFor="let wo of workOrder$ | async" >
+      {{wo.work_order_id}}
+</li>
